@@ -1,0 +1,28 @@
+{
+  "name": "icd-api",
+  "version": "1.0.0",
+  "description": "app that pings an ICD api for look up",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.comajsimon1/icd-api"
+  },
+  "keywords": [
+    "healthcare",
+    "icd",
+    "api",
+    "electron",
+    "desktop"
+  ],
+  "author": "Adam Simon",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^2.0.4",
+    "jquery": "^3.3.1",
+    "request-promise": "^4.2.2",
+    "semantic-ui": "^2.3.2"
+  }
+}

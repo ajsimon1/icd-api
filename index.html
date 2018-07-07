@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <title>ICD Search</title>
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui left aligned container">
+      <h1>Enter ICD Information</h1>
+      </div>
+      <hr>
+      <form class="ui form">
+        <div class=" required field">
+          <label>Asset 1</label>
+          <input type="text" id="asset-one" name="asset-one" placeholder="Enter Barcode">
+        </div>
+        <button onclick="pingApi()" class="ui primary button" id="ping" type="button">Ping API</button>
+        <button onclick="clearInput()" class="ui button" id="clear" type="button">Clear</button>
+      </form>
+      <p id="test"></p>
+    </div>
+  </body>
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script>window.$ = window.jQuery = require("./js/jquery-3.1.1.min.js");</script>  <!--Required for Electron-->
+  <script src="js/script.js"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+</html>
