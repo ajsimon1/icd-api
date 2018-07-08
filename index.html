@@ -13,13 +13,31 @@
       <hr>
       <form class="ui form">
         <div class=" required field">
-          <label>Asset 1</label>
-          <input type="text" id="asset-one" name="asset-one" placeholder="Enter Barcode">
+          <label>ICD Name</label>
+          <input type="text" id="icd-name" name="icd-name" placeholder="">
         </div>
         <button onclick="pingApi()" class="ui primary button" id="ping" type="button">Ping API</button>
         <button onclick="clearInput()" class="ui button" id="clear" type="button">Clear</button>
       </form>
       <p id="test"></p>
+      <table id="results-table" class="ui padded table">
+      <thead>
+        <tr>
+          <th>ICD-10</th>
+          <th>Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </body>
   <script src="./js/jquery-3.1.1.min.js"></script>
