@@ -5,7 +5,29 @@ $(document).ready(function () {
 var req = require('request');
 var base = 'https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search';
 
-// can pass params in as qs option
+function createTable(tableData) {
+  var table = document.createElement('table');
+  table.className= "ui padded table";
+  var tableBody = document.createElement('tbody');
+
+  tableData.forEach(function(rowData) {
+    var row = document.createElement('tr');
+
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement('td');
+      cell.appendChild(document.createTextNode(cellData));
+      row.appendChild(cell);
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  table.appendChild(tableBody);
+  var divContainer = document.getElementById('#main-container');
+  var pElement = document.getElementById('#test');
+  // document.body.appendChild(table);
+  document.body.insertBefore(table, pElement);
+}
 
 function pingApi() {
   var a;
@@ -24,10 +46,7 @@ function pingApi() {
     a = JSON.parse(body)[3];
 
     var table = document.getElementById('results-table');
-    for (var i = 1; i < table.rows.length; i++) {
-      for (var j = 0; table.rows[0].cells.length; j++) {
-        table.rows[i].cells[j].innerHTML = a[i-1][j];
-      }}
+    createTable(a);
   })
   $("#results-table").show();
 };
