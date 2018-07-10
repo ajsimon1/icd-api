@@ -12,15 +12,23 @@
       </div>
       <hr>
       <form class="ui form">
-        <div class=" required field">
-          <label>ICD Name</label>
+        <div class="required field">
+          <label>ICD Code or Text</label>
           <input type="text" id="icd-name" name="icd-name" placeholder="">
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="max-results" tabindex="0" checked>
+            <label>Max Results</label>
+          </div>
+        </div>
+        <div class="two wide field">
+          <input type="text" name="results-num" id="results-num" placeholder="Enter max results to return" value="">
         </div>
         <button onclick="pingApi()" class="ui primary button" id="ping" type="button">Ping API</button>
         <button onclick="clearInput()" class="ui button" id="clear" type="button">Clear</button>
       </form>
-      <p id="test">text here</p>
-      <!--<table id="results-table" class="ui padded table">-->
+      <p id="test"></p>
   </body>
   <script src="./js/jquery-3.1.1.min.js"></script>
   <script>window.$ = window.jQuery = require("./js/jquery-3.1.1.min.js");</script>  <!--Required for Electron-->
